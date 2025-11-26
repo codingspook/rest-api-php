@@ -31,7 +31,6 @@
             "echo 'Progetto inizializzato con successo!'"
         ]
     },
-    "stability": "stable",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
