@@ -1,0 +1,39 @@
+# Dipendenze Composer
+/vendor
+composer.lock
+
+# File di configurazione locale
+.env
+.env.local
+config.local.php
+*.local.php
+
+# File IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.phpstorm.meta.php
+
+# File OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# File di log
+*.log
+logs/
+
+# Database SQLite (se usato)
+*.sqlite
+*.sqlite3
+database.sqlite
+
+# Database JSON (se usato)
+db.json
+
+# File temporanei
+*.tmp
+*.cache
+*.swp
+*~
