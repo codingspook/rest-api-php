@@ -66,7 +66,7 @@ trait WithValidate
             $hasSometimes = in_array('sometimes', $rules, true);
             
             // Se c'è "sometimes" e il campo non è presente, salta tutte le regole per questo campo
-            if ($hasSometimes && !isset($data[$field])) {
+            if ($hasSometimes && !array_key_exists($field, $data)) {
                 continue;
             }
 
@@ -128,7 +128,7 @@ trait WithValidate
 
         switch ($ruleName) {
             case 'required':
-                if (empty($value) && $value !== '0' && $value !== 0) {
+                if ($value === null || $value === '') {
                     return $customMessage ?? "Il campo {$field} è obbligatorio";
                 }
                 break;
