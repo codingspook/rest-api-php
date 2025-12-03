@@ -1,4 +1,4 @@
-# Template Simple REST API
+# DB implementation example with Simple Rest API
 
 Template minimale per creare backend REST API in PHP
 
@@ -25,19 +25,20 @@ composer install
 ```
 nome-progetto/
 ├── config/
+│   ├── database.php     # Configurazione database
 │   └── cors.php         # Configurazione CORS
 ├── routes/
-│   ├── users.php        # Definizione route per la risorsa utenti
 │   └── index.php        # Definizione route
 ├── public/
 │   └── index.php        # Entry point
 ├── src/
 │   ├── bootstrap.php    # Bootstrap dell'applicazione
+│   ├── Database/
+│   ├── ├── DB.php              # Classe DB
+│   │   └── JSONDB.php          # Classe JSONDB
 │   ├── Models/
-│   │   ├── BaseModel.php       # Classe BaseModel
-│   │   └── User.php            # Esempio model
+│   │   └── BaseModel.php       # Classe BaseModel
 │   └── Utils/
-│       ├── DB.php              # Classe DB
 │       ├── Request.php         # Classe Request
 │       └── Response.php        # Gestione risposte JSON
 ├── composer.json        # Dipendenze Composer
