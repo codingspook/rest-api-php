@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utils;
+namespace App\Database;
 
 /**
  * Classe DB per gestione database JSON-based

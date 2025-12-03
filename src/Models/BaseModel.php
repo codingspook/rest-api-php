@@ -75,12 +75,11 @@ abstract class BaseModel
             $row = array_find($collection, function ($item) use ($id) {
                 return $item->id === $id;
             });
-            return $row ?: null;
         } else {
             $result = DB::select("SELECT * FROM " . static::getTableName() . " WHERE id = :id", ['id' => $id]);
             $row = $result[0] ?? null;
-            return $row ? new static($row) : null;
         }
+        return $row ? new static($row) : null;
     }
 
     /**
